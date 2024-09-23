@@ -51,8 +51,8 @@ export async function loginService(userData: UserLoginInput) {
     console.log("Password validated");
 
     // Generate tokens
-    const accessToken = generateAccessToken(user.id, user.email);
-    const refreshToken = generateRefreshToken(user.id, user.email);
+    const accessToken = generateAccessToken(user.id, user.email, user.role);
+    const refreshToken = generateRefreshToken(user.id, user.email, user.role);
     console.log("Tokens generated:", { accessToken, refreshToken });
 
     // Store refresh token in Redis

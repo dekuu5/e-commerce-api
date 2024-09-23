@@ -9,7 +9,7 @@ const auth = Router();
 auth.post('/register', validate(userRegisterSchema), registerController);
 auth.post('/login', validate(userLoginSchema),loginController);
 auth.post('/sign-out', verifyAccessToken, signOutController);
-auth.post('/refresh-token', refreshTokenController);
+auth.get('/refresh-token', refreshTokenController);
 
 
 export default auth;

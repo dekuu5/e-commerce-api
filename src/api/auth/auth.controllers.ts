@@ -44,6 +44,7 @@ export async function signOutController(req: Request, res: Response) {
     }
 }
 
+
 export async function refreshTokenController(req: Request, res: Response) {
     try {
         const { refreshToken } = req.body;
@@ -58,7 +59,7 @@ export async function refreshTokenController(req: Request, res: Response) {
             return res.status(401).json({ message: "Invalid refresh token" });
         }
 
-        const accessToken = generateAccessToken(user.id, user.email);
+        const accessToken = generateAccessToken(user.id, user.email, user.role);
 
         res.status(200).json({ accessToken });
     } catch (error) {

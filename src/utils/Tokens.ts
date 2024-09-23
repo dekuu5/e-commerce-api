@@ -8,10 +8,10 @@ const JWT_EXPIRATION = process.env.JWT_EXPIRATION || '15m';
 const JWT_REFRESH_EXPIRATION = process.env.JWT_REFRESH_EXPIRATION || '7d';
 
 // Generate Access Token
-export function generateAccessToken(userId: number, email: string): string {
+export function generateAccessToken(userId: number, email: string, role: string): string {
     log("Generating access token");
     const accessToken = jwt.sign(
-        { id: userId, email },
+        { id: userId, email, role },
         JWT_SECRET,
         { expiresIn: JWT_EXPIRATION }
     );
@@ -19,26 +19,28 @@ export function generateAccessToken(userId: number, email: string): string {
 }
 
 // Generate Refresh Token
-export function generateRefreshToken(userId: number, email: string): string {
+export function generateRefreshToken(userId: number, email: string, role: string): string {
     log("Generating refresh token");
     const refreshToken = jwt.sign(
-        { id: userId, email },
+        { id: userId, email, role },
         JWT_REFRESH_SECRET,
         { expiresIn: JWT_REFRESH_EXPIRATION }
     );
     return refreshToken;
 }
 
-export async function verifyRefreshToken(refreshToken: string): Promise<{ id: number; email: string } | null> {
+export async function verifyRefreshToken(refreshToken: string): Promise<{ id: number; email: string; role: string } | null> {
     try {
-        const decoded = jwt.verify(refreshToken, JWT_REFRESH_SECRET) as { id: number; email: string };
+        const decoded = jwt.verify(refreshToken, JWT_REFRESH_SECRET) as {
+            role: string; id: number; email: string 
+};
         const storedToken = await redisClient.get(decoded.id.toString());
 
         if (storedToken !== refreshToken) {
             return null;
         }
 
-        return { id: decoded.id, email: decoded.email };
+        return { id: decoded.id, email: decoded.email, role: decoded.role };
     } catch (error) {
         return null;
     }
