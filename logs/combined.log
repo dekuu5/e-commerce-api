@@ -1,0 +1,33 @@
+2024-09-21 20:02:55 info: [90mGET /[39m [36m304[39m [90m2ms[39m
+2024-09-21 20:03:40 info: [90mGET /[39m [36m304[39m [90m1ms[39m
+2024-09-21 20:03:51 info: [90mGET /[39m [32m200[39m [90m1ms[39m
+2024-09-21 20:05:29 info: [90mGET /qewfqe[39m [33m404[39m [90m1ms[39m
+2024-09-21 20:06:23 error: middlewareError
+2024-09-21 20:06:23 info: [90mGET /error[39m [31m500[39m [90m9ms[39m
+2024-09-21 20:06:47 info: [90mGET /error[39m [33m404[39m [90m2ms[39m
+2024-09-22 12:46:40 info: [90mGET /api/v1[39m [32m200[39m [90m1ms[39m
+2024-09-22 13:21:26 info: [90mPOST /api/v1/register[39m [33m404[39m [90m3ms[39m
+2024-09-22 13:21:57 error: Validation error: Required,Required,Required
+2024-09-22 13:21:57 info: [90mPOST /api/v1/auth/register[39m [33m400[39m [90m4ms[39m
+2024-09-22 13:26:32 error: Validation error: Password must contain at least one uppercase letter
+2024-09-22 13:26:32 info: [90mPOST /api/v1/auth/register[39m [33m400[39m [90m12ms[39m
+2024-09-22 13:26:45 info: [90mPOST /api/v1/auth/register[39m [32m201[39m [90m2173ms[39m
+2024-09-23 11:36:41 info: [90mPOST /api/v1/auth/register[39m [31m500[39m [90m330ms[39m
+2024-09-23 11:36:50 info: [90mPOST /api/v1/auth/register[39m [32m201[39m [90m257ms[39m
+2024-09-23 11:37:10 error: Validation error: Required,Required
+2024-09-23 11:37:10 info: [90mPOST /api/v1/auth/login[39m [33m400[39m [90m3ms[39m
+2024-09-23 11:38:50 info: [90mPOST /api/v1/auth/register[39m [31m500[39m [90m133ms[39m
+2024-09-23 12:14:43 info: [90mPOST /api/v1/auth/login[39m [33m401[39m [90m240ms[39m
+2024-09-23 12:21:33 info: [90mPOST /api/v1/auth/login[39m [33m401[39m [90m284ms[39m
+2024-09-23 12:42:48 info: [90mPOST /api/v1/auth/login[39m [32m200[39m [90m1419ms[39m
+2024-09-23 13:07:08 info: [90mPOST /api/v1/auth/login[39m [32m200[39m [90m257ms[39m
+2024-09-23 13:46:53 info: [90mPOST /api/v1/auth/sign-out[39m [33m401[39m [90m2ms[39m
+2024-09-23 13:47:06 info: [90mPOST /api/v1/auth/sign-out[39m [33m401[39m [90m3ms[39m
+2024-09-23 13:47:17 info: [90mPOST /api/v1/auth/sign-out[39m [33m401[39m [90m2ms[39m
+2024-09-23 13:47:22 info: [90mPOST /api/v1/auth/login[39m [32m200[39m [90m328ms[39m
+2024-09-23 13:47:32 info: [90mPOST /api/v1/auth/sign-out[39m [32m200[39m [90m107ms[39m
+2024-09-23 15:20:12 info: [90mPOST /api/v1/auth/register[39m [32m201[39m [90m423ms[39m
+2024-09-23 15:20:22 info: [90mPOST /api/v1/auth/login[39m [33m401[39m [90m136ms[39m
+2024-09-23 15:20:29 info: [90mPOST /api/v1/auth/login[39m [32m200[39m [90m151ms[39m
+2024-09-23 15:20:40 info: [90mPOST /api/v1/auth/sign-out[39m [33m401[39m [90m3ms[39m
+2024-09-23 15:20:45 info: [90mPOST /api/v1/auth/sign-out[39m [32m200[39m [90m57ms[39m

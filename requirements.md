@@ -1,3 +1,17 @@
+## Authentication
+-   login useing email and password
+-   upon login create access token and refresh token
+-   access token send using Authorization header 
+-   refresh token send in httponly cookie and stored in redis a `{"refreshToken" : {"userid":1, "email:a@a.a"}}
+-   
+
+
+
+
+
+
+
+
 Entities for the eCommerce System
 1. User Entity:
 Description: Represents a user of the platform, including both customers and admins.

@@ -1,0 +1,4 @@
+2024-09-21 20:06:23 error: middlewareError
+2024-09-22 13:21:57 error: Validation error: Required,Required,Required
+2024-09-22 13:26:32 error: Validation error: Password must contain at least one uppercase letter
+2024-09-23 11:37:10 error: Validation error: Required,Required
